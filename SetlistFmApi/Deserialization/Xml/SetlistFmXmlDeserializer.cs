@@ -23,7 +23,7 @@ namespace SetlistFmApi.Deserialization.Xml
             };
         }
 
-        public T Deserialize<T>(RestResponse response) where T : new()
+        public T Deserialize<T>(IRestResponse response) 
         {
             var type = typeof(T);
 

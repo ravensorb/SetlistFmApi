@@ -30,12 +30,12 @@ namespace SetlistFmApi.IntegrationTests
         [Fact]
         public void FindVenue_ById_CanFindVenue()
         {
-            var id = "33d6d4ad";
+            var id = "4bd63782";
 
             var venue = _client.FindVenue(id);
 
             Assert.NotNull(venue);
-            Assert.Equal(venue.Name, "Sonisphere Festival");
+            Assert.Equal(venue.Name, "Wachovia Center");
         }
 
         [Fact]
@@ -52,7 +52,7 @@ namespace SetlistFmApi.IntegrationTests
         [Fact]
         public void FindSetlistsByVenue_CanFindSetlists()
         {
-            var options = new SetlistByVenueSearchOptions() { VenueId = "33d6d4ad" };
+            var options = new SetlistByVenueSearchOptions() { VenueId = "4bd63782" };
 
             var results = _client.FindSetlistsByVenue(options);
 

@@ -4,6 +4,6 @@ namespace SetlistFmApi.Deserialization
 {
     public interface ICustomXmlDeserializer
     {
-        object Deserialize(RestResponse response);
+        object Deserialize(IRestResponse response);
     }
 }

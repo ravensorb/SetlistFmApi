@@ -25,7 +25,7 @@ namespace SetlistFmApi
             _jsonDeserializer = new SetlistFmJsonDeserializer();
             _apiKey = apiKey;
             _client = new RestClient();
-            _client.BaseUrl = _baseUrl;
+            _client.BaseUrl = new Uri(_baseUrl);
             Format = DataFormat.Xml;
 
             _client.ClearHandlers();

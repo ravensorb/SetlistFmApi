@@ -9,7 +9,7 @@ namespace SetlistFmApi.Deserialization.Xml.CustomDeserializers
 {
     public class CitySearchResultXmlDeserializer : ICustomXmlDeserializer
     {
-        public object Deserialize(RestResponse response)
+        public object Deserialize(IRestResponse response)
         {
             var root = XDocument.Parse(response.Content).Root;
             var cities = root.Descendants("cities");

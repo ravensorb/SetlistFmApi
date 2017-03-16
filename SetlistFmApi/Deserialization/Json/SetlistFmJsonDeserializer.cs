@@ -19,7 +19,7 @@ namespace SetlistFmApi.Deserialization.Json
             _deserializer = new SetlistFmXmlDeserializer();
         }
 
-        public T Deserialize<T>(RestResponse response) where T : new()
+        public T Deserialize<T>(IRestResponse response) 
         {
             response.Content = _badgerFisher.JsonToXml(response.Content);
 
